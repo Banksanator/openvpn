@@ -1,0 +1,14 @@
+---
+- name: server conf.
+  hosts: openvpn-server
+  roles:
+    - role: ansible_role_repositories
+    - role: ansible_role_packages     
+    - role: ansible_role_security
+    - role: ansible-role-openvpn
+      openvpn_port: 80
+      openvpn_sync_certs: True
+      clients: "{{ openvpn-clients }}"
+      openvpn_fetch_client_configs_dir: ~/openvpn/ansible/configs
+      openvpn_client_to_client: False
+      openvpn_firewall: firewalld

@@ -1,0 +1,9 @@
+---
+roles:
+  - src: git+https://gitlab.com/dreamer-labs/maniac/ansible_role_repositories.git
+  - src: git+https://gitlab.com/dreamer-labs/maniac/ansible_role_packages.git
+  - src: git+https://gitlab.com/dreamer-labs/maniac/ansible_role_security.git
+  - src: git+https://github.com/mbank59/ansible-role-openvpn.git
+collections:
+  - name: ansible.posix
+  - name: community.general
